@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход — Мой сайт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="frame" aria-hidden="true"></div>
+
+    <main class="card">
+      <img class="logo" src="assets/logo.svg" alt="Логотип сайта" />
+
+      <h1>Вход</h1>
+
+      <form id="auth-form" novalidate>
+        <label class="field">
+          <span class="sr-only">Электронная почта</span>
+          <input
+            id="login"
+            type="text"
+            placeholder="Электронная почта"
+            autocomplete="username"
+            required
+          />
+        </label>
+
+        <label class="field">
+          <span class="sr-only">Пароль</span>
+          <input
+            id="password"
+            type="password"
+            placeholder="Пароль"
+            autocomplete="current-password"
+            required
+          />
+          <button
+            id="toggle-password"
+            class="eye"
+            type="button"
+            aria-label="Показать пароль"
+            aria-pressed="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </button>
+        </label>
+
+        <button id="forgot" class="link link-center" type="button">
+          Забыли пароль?
+        </button>
+
+        <p id="error" class="error" role="alert" hidden></p>
+
+        <button id="submit" class="primary" type="submit" disabled>
+          Далее
+        </button>
+      </form>
+
+      <div class="divider"><span>или</span></div>
+
+      <button id="google" class="google-btn" type="button">
+        <span class="g-mark" aria-hidden="true">G</span>
+        Продолжить через Google
+      </button>
+
+      <p class="terms">
+        Продолжая, вы соглашаетесь с нашими
+        <a href="#" id="terms-link">Условиями предоставления услуг</a> и
+        <a href="#" id="privacy-link">Политикой конфиденциальности</a>.
+      </p>
+
+      <p class="switch">
+        <button id="switch-mode" class="link" type="button">
+          НЕТ АККАУНТА? ЗАРЕГИСТРИРУЙТЕСЬ
+        </button>
+      </p>
+    </main>
+
+    <script src="assets/accounts.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
